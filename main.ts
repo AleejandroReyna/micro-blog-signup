@@ -1,9 +1,9 @@
-import { Application } from "https://deno.land/x/oak/mod.ts";
+import { Application } from "./depts.ts"
+import { signup } from './handlers/signup.ts'
 
-const app = new Application();
+const port = 3000
+const app = new Application()
 
-app.use((ctx) => {
-  ctx.response.body = 'Signup service will be here';
-});
+app.use(signup)
 
-await app.listen({ port: 3000 });
+await app.listen({ port });
