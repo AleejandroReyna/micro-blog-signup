@@ -1,3 +1,3 @@
 #!/bin/sh
 
-deno run --allow-read --allow-net --watch ./main.ts
+deno run --allow-read --allow-net --allow-env --watch ./main.ts
